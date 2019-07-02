@@ -2,6 +2,7 @@ import 'dart:ui' as prefix1;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
+import 'package:ung_ssru/screens/register.dart';
 
 class Authen extends StatefulWidget {
   @override
@@ -24,7 +25,13 @@ class _AuthenState extends State<Authen> {
         'Sign Up',
         style: TextStyle(color: Colors.black),
       ),
-      onPressed: () {},
+      onPressed: () {
+        print('You SignUp');
+        //create route
+        var registerRoute =
+            MaterialPageRoute(builder: (BuildContext context) => Register());
+            Navigator.of(context).push(registerRoute);
+      },
     );
   }
 
@@ -102,7 +109,8 @@ class _AuthenState extends State<Authen> {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-          colors: [Colors.white,Colors.pink[50]],begin: Alignment.topCenter,
+          colors: [Colors.white, Colors.pink[50]],
+          begin: Alignment.topCenter,
         )),
         padding: EdgeInsets.only(top: 60.0),
         alignment: Alignment.topCenter,
